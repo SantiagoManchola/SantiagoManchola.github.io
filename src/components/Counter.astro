@@ -1,0 +1,63 @@
+---
+
+---
+
+<section class="relative mt-7">
+  <div class="text-center m-0">
+    <h1 class="font-normal tracking-[.125em] uppercase text-4xl" id="headline">
+      termina el aguacero
+    </h1>
+    <div id="countdown">
+      <ul>
+        <li class="inline-block text-[1.5em] list-none p-4 uppercase">
+          <span class="text-7xl block" id="days"></span>Días
+        </li>
+        <li class="inline-block text-[1.5em] list-none p-4 uppercase">
+          <span class="text-7xl block" id="hours"></span>Horas
+        </li>
+        <li class="inline-block text-[1.5em] list-none p-4 uppercase">
+          <span class="text-7xl block" id="minutes"></span>Minutos
+        </li>
+        <li class="inline-block text-[1.5em] list-none p-4 uppercase">
+          <span class="text-7xl block" id="seconds"></span>Segundos
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    const second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
+
+    const countDown = new Date("09/22/2024").getTime(),
+      x = setInterval(function () {
+        const now = new Date().getTime(),
+          distance = countDown - now;
+
+        (document.getElementById("days").innerText = Math.floor(
+          distance / day
+        )),
+          (document.getElementById("hours").innerText = Math.floor(
+            (distance % day) / hour
+          )),
+          (document.getElementById("minutes").innerText = Math.floor(
+            (distance % hour) / minute
+          )),
+          (document.getElementById("seconds").innerText = Math.floor(
+            (distance % minute) / second
+          ));
+
+        if (distance < 0) {
+          document.getElementById("headline").innerText =
+            "El momento ha llegado";
+          document.getElementById("countdown").style.display = "none";
+          document.getElementById("content").style.display = "block";
+          clearInterval(x);
+        }
+      }, 0);
+  })();
+</script>
