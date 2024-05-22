@@ -2,28 +2,33 @@
 
 ---
 
-<section class="relative my-16">
+<section
+  class="relative bg-gradient-to-r from-blue-400 to-indigo-00 py-16 text-white"
+>
   <div class="text-center m-0">
-    <h1 class="uppercase text-7xl font-semibold" id="headline">
+    <h1 class="uppercase text-7xl font-semibold mb-8" id="headline">
       termina el aguacero
     </h1>
     <div id="countdown" class="font-semibold mt-6">
-      <ul>
-        <li class="inline-block text-[1.5em] list-none p-4 uppercase">
-          <span class="text-7xl block" id="days"></span>Días
+      <ul class="flex justify-center space-x-4">
+        <li class="text-2xl list-none p-4 uppercase flex flex-col items-center">
+          <span class="text-7xl font-bold mb-2" id="days">00</span>
+          Días
         </li>
-        <li class="inline-block text-[1.5em] list-none p-4 uppercase">
-          <span class="text-7xl block" id="hours"></span>Horas
+        <li class="text-2xl list-none p-4 uppercase flex flex-col items-center">
+          <span class="text-7xl font-bold mb-2" id="hours">00</span>
+          Horas
         </li>
-        <li class="inline-block text-[1.5em] list-none p-4 uppercase">
-          <span class="text-7xl block" id="minutes"></span>Minutos
+        <li class="text-2xl list-none p-4 uppercase flex flex-col items-center">
+          <span class="text-7xl font-bold mb-2" id="minutes">00</span>
+          Minutos
         </li>
-        <li class="inline-block text-[1.5em] list-none p-4 uppercase">
-          <span class="text-7xl block" id="seconds"></span>Segundos
+        <li class="text-2xl list-none p-4 uppercase flex flex-col items-center">
+          <span class="text-7xl font-bold mb-2" id="seconds">00</span>
+          Segundos
         </li>
       </ul>
     </div>
   </div>
 </section>
-
 <script src="../countdown.js"></script>
